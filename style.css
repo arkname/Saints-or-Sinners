@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #555;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Círculos */
+.circle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.pink {
+    background-color: #ff69b4; /* Cor rosa */
+}
+
+.green {
+    background-color: #556b2f; /* Cor verde musgo */
+}
+
+.gold {
+    background-color: #ffd700; /* Cor dourada */
+}
+
+.circle1 {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 50%;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 80%;
+}
+
+.circle4 {
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: 20%;
+}
+
+.circle5 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: 70%;
+}

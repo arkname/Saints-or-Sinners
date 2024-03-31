@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saints or Sinners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header,
+        nav,
+        main,
+        aside,
+        footer {
+            display: flex;
+        }
+        
+        header {
+            background: #476e2d;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+            height: 100px;
+        }
+        
+        header #Logo {
+            background: rgb(100, 100, 48);
+            padding: 10px 20px;
+            color: rgb(238, 219, 45);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        
+        #openMenu,
+        #closeMenu {
+            display: none;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            color: rgb(158, 33, 33);
+        }
+        
+        nav {
+            background: #333;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+        
+        main {
+            flex: 1 1 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: #333;
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+        
+        .pink {
+            background-color: pink;
+        }
+        
+        .gold {
+            background-color: gold;
+        }
+        
+        .green {
+            background-color: green;
+        }
+        
+        aside {
+            background: #333;
+            flex: 1;
+            padding: 20px;
+        }
+        
+        footer {
+            background: #476e2d;
+            color: #333;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media only screen and (max-width: 717px) {
+            header {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            header #Logo {
+                margin-bottom: 10px;
+            }
+            
+            #openMenu,
+            #closeMenu {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                background: #333;
+                padding: 10px 0;
+            }
+            
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" id="Logo">LOGO</a>
+        <button id="openMenu">&#9776;</button>
+        <nav id="menu">
+            <button id="closeMenu">&#10006;</button>
+            <a href="livrobrabo.html">livro boladão</a>
+            <a href="comunidade.html">comunidade</a>
+            <a href="dados.html">dados</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>na existência roda em um ciclo</h1>
+        <!-- Círculos -->
+        <div class="circle pink" style="top: 30%; left: 20%; width: 80px; height: 80px;"></div>
+        <div class="circle gold" style="top: 50%; left: 50%; width: 120px; height: 120px;"></div>
+        <div class="circle green" style="top: 70%; left: 80%; width: 160px; height: 160px;"></div>
+    </main>
+
+    <aside>relacionados</aside>
+
+    <footer>
+        <h2>Direção Geral: Pedro Henrique “PJ” de Jesus Oliveira</h2>
+    </footer>
+   
+    <script type="text/javascript">
+        openMenu.addEventListener('click', ()=>{
+            menu.style.display = 'flex'
+            
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+            open.style.display = 'none'
+            setTimeout(() => {
+                menu.style.opacity = '1'
+    
+                menu.style.right = '0'
+            }, 10)
+            menu.style.opacity
+        })
+        closeMenu.addEventListener('click', () => {
+            menu.style.opacity = '0'
+    
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+    
+            setTimeout(() => {
+                menu.removeAttribute('style')
+                openMenu.removeAttribute(style)
+            }, 200)
+        })
+    </script>
+</body>
+</html>
